@@ -6,6 +6,8 @@ ORDER BY USER_ID ASC, PRODUCT_ID DESC;
 
 /*
 HAVING 절이 있었지...
+GROUP BY 절에서 조건을 주려면 HAVING 절을 사용해야 한다.
+WHERE 절에는 집계함수를 사용할 수 없기 때문이다!
 */
 SELECT USER_ID, PRODUCT_ID
 FROM (SELECT USER_ID, PRODUCT_ID, COUNT(*) AS cnt
